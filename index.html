@@ -9,16 +9,60 @@
 <body>
 
 <div class="container">
-    <img src="image/intro.gif" alt="intro">
-    <h2>Will you be my date?💕</h2>
-    
-    <button onclick="answer('yes')">Yes ❤️</button>
-    <button onclick="answer('no')">No 💔</button>
-    
-    <div class="response" id="response"></div>
+    <!-- Password Section -->
+    <div id="passwordSection">
+        <h2>PASSWORD</h2>
+        <input type="text" id="passwordDisplay" readonly>
+        <div class="calculator">
+            <button onclick="addToPassword('1')">1</button>
+            <button onclick="addToPassword('2')">2</button>
+            <button onclick="addToPassword('3')">3</button>
+            <button onclick="addToPassword('4')">4</button>
+            <button onclick="addToPassword('5')">5</button>
+            <button onclick="addToPassword('6')">6</button>
+            <button onclick="addToPassword('7')">7</button>
+            <button onclick="addToPassword('8')">8</button>
+            <button onclick="addToPassword('9')">9</button>
+            <button onclick="addToPassword('0')">0</button>
+            <button onclick="clearPassword()">Clear</button>
+            <button onclick="submitPassword()">Submit</button>
+        </div>
+        <div id="error"></div>
+    </div>
+
+    <!-- Invitation Section -->
+    <div id="invitationSection" style="display: none;">
+        <img src="image/intro.gif" alt="intro">
+        <h2>Will you be my date?💕</h2>
+        <button onclick="answer('yes')">Yes ❤️</button>
+        <button onclick="answer('no')">No 💔</button>
+        <div class="response" id="response"></div>
+    </div>
 </div>
 
 <script>
+    let password = '';
+    const correctPassword = '2422'; // Example password
+    
+    function addToPassword(value) {
+        password += value;
+        document.getElementById('passwordDisplay').value = '*'.repeat(password.length); // Display as stars
+    }
+    
+    function clearPassword() {
+        password = '';
+        document.getElementById('passwordDisplay').value = '';
+    }
+    
+    function submitPassword() {
+        if (password === correctPassword) {
+            document.getElementById('passwordSection').style.display = 'none';
+            document.getElementById('invitationSection').style.display = 'block';
+        } else {
+            document.getElementById('error').textContent = 'hahaha mali!';
+        }
+    }
+    
     function answer(choice) {
         const responseDiv = document.getElementById('response');
         if (choice === 'yes') {
