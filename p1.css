@@ -46,7 +46,7 @@ body {
     /* Media Query for smaller devices */
     @media screen and (max-width: 600px) {
         body {
-            background-size: 200px, 150px; /* Adjust background PNG sizes for small screens */
+            background-size: 100px, 50px; /* Adjust background PNG sizes for small screens */
         }
 
         .container {
