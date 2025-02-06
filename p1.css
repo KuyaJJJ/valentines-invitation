@@ -1,67 +1,60 @@
 body {
-        font-family: 'Arial', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #FFB6C1; /* Light pink background */
-        background-image: 
-            url('image/wbb.png'), /* PNG of Grizz at bottom-right */
-        background-position: 
-            bottom right, /* Position Grizz at bottom-right */
-            bottom left; /* Position the second PNG at bottom-left */
-        background-repeat: no-repeat, no-repeat; /* No repeating of images */
-        background-size: 450px, 300px; /* Adjust sizes as needed */
-        background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFB6C1; /* Light pink background */
+    background-image: url('image/wbb.png'); /* Only one PNG */
+    background-position: bottom right; /* Position the PNG at bottom-right */
+    background-repeat: no-repeat; /* No repeating of the image */
+    background-size: 450px; /* Adjust size as needed */
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #333;
+    font-family: 'DM Sans', sans-serif; /* Applying DM Sans to h2 */
+}
+
+.response {
+    font-size: 18px;
+    color: #5D3F6B;
+}
+
+/* Media Query for smaller devices */
+@media screen and (max-width: 600px) {
+    body {
+        background-size: 120px; /* Adjust background PNG size for small screens */
     }
 
     .container {
-        text-align: center;
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    img {
-        width: 400px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 90%; /* Make the container smaller for mobile */
     }
 
     h2 {
-        font-size: 30px;
-        margin-top: 20px;
-        color: #333;
-        font-family: 'DM Sans', sans-serif; /* Applying DM Sans to h2 */
+        font-size: 24px; /* Adjust heading size for mobile */
     }
 
-    .response {
-        font-size: 18px;
-        color: #5D3F6B;
+    img {
+        width: 220px; /* Adjust image size for mobile */
     }
-
-    /* Media Query for smaller devices */
-    @media screen and (max-width: 600px) {
-        body {
-            background-size: 200px, 150px; /* Adjust background PNG sizes for small screens */
-            background-image:
-            url('image/wbb.png'), /* PNG of Grizz at bottom-right */
-            background-position: 
-            bottom right, /* Position Grizz at bottom-right */
-        }
-
-        .container {
-            padding: 20px;
-            width: 90%; /* Make the container smaller for mobile */
-        }
-
-        h2 {
-            font-size: 24px; /* Adjust heading size for mobile */
-        }
-
-        img {
-            width: 220px; /* Adjust image size for mobile */
-        }
-    }
+}
