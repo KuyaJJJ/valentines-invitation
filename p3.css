@@ -1,75 +1,84 @@
 body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #FFB6C1;
-            background-image: url('image/wbb.png'); /* PNG of Grizz */
-            background-position: bottom right;
-            background-repeat: no-repeat;
-            background-size: 450px;
-            background-attachment: fixed;
-        }
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        img {
-            width: 200px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            font-size: 30px;
-            margin-top: 20px;
-            color: #FF6F61;
-            font-family: 'DM Sans', sans-serif; /* Applying DM Sans to h2 */
-        }
-        .response {
-            font-size: 18px;
-            color: #5D3F6B;
-        }
-        button {
-            background-color: #FF6F61;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            margin-top: 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: 0.3s ease;
-        }
-        button:hover {
-            background-color: #F9AFAE;
-            transform: scale(1.1);
-        }
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFB6C1;
+    background-image: url('image/wbb.png'); /* Sad image */
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-attachment: fixed;
+}
 
-        /* Media Query for smaller devices */
-        @media screen and (max-width: 600px) {
-            body {
-                background-size: 200px;
-            }
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Reduced width */
+    max-width: 90%; /* Ensure responsiveness */
+}
 
-            .container {
-                padding: 20px;
-                width: 90%;
-            }
+h2 {
+    font-size: 28px; /* Smaller font size */
+    margin-top: 20px;
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
+}
 
-            h2 {
-                font-size: 24px;
-            }
+img {
+    width: 250px; /* Smaller image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation for sadness effect */
+}
 
-            img {
-                width: 220px;
-            }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-            button {
-                padding: 12px 25px;
-            }
-        }
+button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Smaller padding */
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px; /* Smaller font size */
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #F9AFAE;
+    transform: scale(1.1);
+}
+
+.response {
+    font-size: 16px; /* Smaller response font size */
+    color: #5D3F6B;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    img {
+        width: 220px; /* Smaller image for mobile */
+    }
+
+    button {
+        padding: 12px 20px; /* Adjust padding for mobile */
+    }
+}
