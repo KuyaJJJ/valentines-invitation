@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p1.css">
+    <title>Valentines Invitation</title>
+</head>
+<body>
+
+<div class="container">
+    <img src="image/intro.gif" alt="intro">
+    <h2>Will you be my date?💕</h2>
+    
+    <button onclick="answer('yes')">Yes ❤️</button>
+    <button onclick="answer('no')">No 💔</button>
+    
+    <div class="response" id="response"></div>
+</div>
+
+<script>
+    function answer(choice) {
+        const responseDiv = document.getElementById('response');
+        if (choice === 'yes') {
+            window.location.href = "yespage.html"; // Redirect to 'Yes' page
+        } else if (choice === 'no') {
+            window.location.href = "nopage.html"; // Redirect to 'No' page
+        }
+    }
+</script>
+
+</body>
+</html>

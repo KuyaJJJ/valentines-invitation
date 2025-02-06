@@ -1,0 +1,75 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #FFB6C1;
+            background-image: url('image/wbb.png'); /* PNG of Grizz */
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: 450px;
+            background-attachment: fixed;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 30px;
+            margin-top: 20px;
+            color: #333;
+            font-family: 'DM Sans', sans-serif; /* Applying DM Sans to h2 */
+        }
+        .response {
+            font-size: 18px;
+            color: #5D3F6B;
+        }
+        button {
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            background-color: #F9AFAE;
+            transform: scale(1.1);
+        }
+
+        /* Media Query for smaller devices */
+        @media screen and (max-width: 600px) {
+            body {
+                background-size: 200px;
+            }
+
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            img {
+                width: 220px;
+            }
+
+            button {
+                padding: 12px 25px;
+            }
+        }
