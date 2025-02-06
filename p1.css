@@ -47,6 +47,12 @@ body {
     @media screen and (max-width: 600px) {
         body {
             background-size: 200px, 150px; /* Adjust background PNG sizes for small screens */
+            background-image:
+            url('image/wbb.png'), /* PNG of Grizz at bottom-right */
+            url('image/cuties.png'); /* PNG for bottom-left corner */
+            background-position: 
+            bottom right, /* Position Grizz at bottom-right */
+            bottom left; /* Position the second PNG at bottom-left */
         }
 
         .container {
